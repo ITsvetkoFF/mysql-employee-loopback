@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysql",
+    "public": true
   },
   "AccessToken": {
     "dataSource": "db",
@@ -31,5 +32,29 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Departments": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "DeptEmp": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "DeptManager": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Employees": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Salaries": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Titles": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
