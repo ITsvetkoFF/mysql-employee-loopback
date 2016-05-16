@@ -1,0 +1,3627 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "mysql-employee-loopback"
+  },
+  "basePath": "/api",
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "application/xml",
+    "text/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml",
+    "text/xml",
+    "application/javascript",
+    "text/javascript"
+  ],
+  "paths": {
+    "/Users/{id}/accessTokens/{fk}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Find a related item by id for accessTokens.",
+        "operationId": "User.prototype.__findById__accessTokens",
+        "parameters": [
+          {
+            "name": "fk",
+            "in": "path",
+            "description": "Foreign key for accessTokens",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/AccessToken"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Delete a related item by id for accessTokens.",
+        "operationId": "User.prototype.__destroyById__accessTokens",
+        "parameters": [
+          {
+            "name": "fk",
+            "in": "path",
+            "description": "Foreign key for accessTokens",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Request was successful"
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update a related item by id for accessTokens.",
+        "operationId": "User.prototype.__updateById__accessTokens",
+        "parameters": [
+          {
+            "name": "fk",
+            "in": "path",
+            "description": "Foreign key for accessTokens",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/AccessToken"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/AccessToken"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/{id}/accessTokens": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Queries accessTokens of User.",
+        "operationId": "User.prototype.__get__accessTokens",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccessToken"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Creates a new instance in accessTokens of this model.",
+        "operationId": "User.prototype.__create__accessTokens",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/AccessToken"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/AccessToken"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Deletes all accessTokens of this model.",
+        "operationId": "User.prototype.__delete__accessTokens",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Request was successful"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/{id}/accessTokens/count": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Counts accessTokens of User.",
+        "operationId": "User.prototype.__count__accessTokens",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "User.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "User.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "User.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/{id}/exists": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "User.exists__get_Users_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/{id}": {
+      "head": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "User.exists__head_Users_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "User.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "User.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "User.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/findOne": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "User.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/update": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "User.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/count": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "User.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/change-stream": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "User.createChangeStream__post_Users_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "User.createChangeStream__get_Users_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Login a user with username/email and password.",
+        "operationId": "User.login",
+        "parameters": [
+          {
+            "name": "credentials",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "include",
+            "in": "query",
+            "description": "Related objects to include in the response. See the description of return value for more details.",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The response body contains properties of the AccessToken created on login.\nDepending on the value of `include` parameter, the body may contain additional properties:\n\n  - `user` - `{User}` - Data of the currently logged in user. (`include=user`)\n\n",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/logout": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Logout a user with access token.",
+        "operationId": "User.logout",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "Request was successful"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/confirm": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Confirm a user registration with email verification token.",
+        "operationId": "User.confirm",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "redirect",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Request was successful"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Users/reset": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Reset password for a user with email.",
+        "operationId": "User.resetPassword",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Request was successful"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments": {
+      "post": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "Departments.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "Departments.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "Departments.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Departments"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments/{id}/exists": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Departments.exists__get_Departments_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments/{id}": {
+      "head": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Departments.exists__head_Departments_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "Departments.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "Departments.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "Departments.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments/findOne": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "Departments.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments/update": {
+      "post": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "Departments.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments/count": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "Departments.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Departments/change-stream": {
+      "post": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Departments.createChangeStream__post_Departments_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Departments.createChangeStream__get_Departments_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/{id}/departments": {
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Fetches belongsTo relation departments.",
+        "operationId": "DeptEmp.prototype.__get__departments",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/{id}/employees": {
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Fetches belongsTo relation employees.",
+        "operationId": "DeptEmp.prototype.__get__employees",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp": {
+      "post": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "DeptEmp.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "DeptEmp.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "DeptEmp.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DeptEmp"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/{id}/exists": {
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "DeptEmp.exists__get_DeptEmp_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/{id}": {
+      "head": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "DeptEmp.exists__head_DeptEmp_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "DeptEmp.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "DeptEmp.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "DeptEmp.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/findOne": {
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "DeptEmp.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/update": {
+      "post": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "DeptEmp.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptEmp"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/count": {
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "DeptEmp.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptEmp/change-stream": {
+      "post": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "DeptEmp.createChangeStream__post_DeptEmp_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "DeptEmp"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "DeptEmp.createChangeStream__get_DeptEmp_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/{id}/departments": {
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Fetches belongsTo relation departments.",
+        "operationId": "DeptManager.prototype.__get__departments",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Departments"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/{id}/employees": {
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Fetches belongsTo relation employees.",
+        "operationId": "DeptManager.prototype.__get__employees",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager": {
+      "post": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "DeptManager.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "DeptManager.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "DeptManager.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DeptManager"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/{id}/exists": {
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "DeptManager.exists__get_DeptManager_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/{id}": {
+      "head": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "DeptManager.exists__head_DeptManager_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "DeptManager.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "DeptManager.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "DeptManager.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/findOne": {
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "DeptManager.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/update": {
+      "post": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "DeptManager.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/DeptManager"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/count": {
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "DeptManager.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/DeptManager/change-stream": {
+      "post": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "DeptManager.createChangeStream__post_DeptManager_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "DeptManager"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "DeptManager.createChangeStream__get_DeptManager_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees": {
+      "post": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "Employees.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "Employees.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "Employees.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Employees"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees/{id}/exists": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Employees.exists__get_Emploees_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees/{id}": {
+      "head": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Employees.exists__head_Emploees_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "Employees.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "Employees.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "Employees.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees/findOne": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "Employees.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees/update": {
+      "post": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "Employees.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees/count": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "Employees.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Emploees/change-stream": {
+      "post": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Employees.createChangeStream__post_Emploees_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Employees.createChangeStream__get_Emploees_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/{id}/employees": {
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Fetches belongsTo relation employees.",
+        "operationId": "Salaries.prototype.__get__employees",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries": {
+      "post": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "Salaries.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "Salaries.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "Salaries.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Salaries"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/{id}/exists": {
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Salaries.exists__get_Salaries_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/{id}": {
+      "head": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Salaries.exists__head_Salaries_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "Salaries.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "Salaries.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "Salaries.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/findOne": {
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "Salaries.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/update": {
+      "post": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "Salaries.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Salaries"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/count": {
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "Salaries.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Salaries/change-stream": {
+      "post": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Salaries.createChangeStream__post_Salaries_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Salaries.createChangeStream__get_Salaries_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/{id}/employees": {
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Fetches belongsTo relation employees.",
+        "operationId": "Titles.prototype.__get__employees",
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Employees"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles": {
+      "post": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Create a new instance of the model and persist it into the data source.",
+        "operationId": "Titles.create",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Update an existing model instance or insert a new one into the data source.",
+        "operationId": "Titles.upsert",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "Model instance data",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Find all instances of the model matched by filter from the data source.",
+        "operationId": "Titles.find",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Titles"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/{id}/exists": {
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Titles.exists__get_Titles_{id}_exists",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/{id}": {
+      "head": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Check whether a model instance exists in the data source.",
+        "operationId": "Titles.exists__head_Titles_{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "exists": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Find a model instance by id from the data source.",
+        "operationId": "Titles.findById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields and include",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Delete a model instance by id from the data source.",
+        "operationId": "Titles.deleteById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Model id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "put": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Update attributes for a model instance and persist it into the data source.",
+        "operationId": "Titles.prototype.updateAttributes",
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersistedModel id",
+            "required": true,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/findOne": {
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Find first instance of the model matched by filter from the data source.",
+        "operationId": "Titles.findOne",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter defining fields, where, include, order, offset, and limit",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/update": {
+      "post": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Update instances of the model matched by where from the data source.",
+        "operationId": "Titles.updateAll",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "An object of model property name/value pairs",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Titles"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "description": "The number of instances updated",
+              "type": "object"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/count": {
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Count instances of the model matched by where from the data source.",
+        "operationId": "Titles.count",
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "description": "Criteria to match model instances",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "count": {
+                  "type": "number",
+                  "format": "double"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/Titles/change-stream": {
+      "post": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Titles.createChangeStream__post_Titles_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+        "tags": [
+          "Titles"
+        ],
+        "summary": "Create a change stream.",
+        "operationId": "Titles.createChangeStream__get_Titles_change-stream",
+        "parameters": [
+          {
+            "name": "options",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "JSON"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request was successful",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "x-any": {
+      "properties": {}
+    },
+    "AccessToken": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "ttl": {
+          "default": 1209600,
+          "description": "time to live in seconds (2 weeks by default)",
+          "type": "number",
+          "format": "double"
+        },
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "userId": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "User": {
+      "properties": {
+        "realm": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "credentials": {
+          "type": "object"
+        },
+        "challenges": {
+          "type": "object"
+        },
+        "email": {
+          "type": "string"
+        },
+        "emailVerified": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string",
+          "format": "date"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date"
+        },
+        "id": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "additionalProperties": false
+    },
+    "Departments": {
+      "properties": {
+        "deptNo": {
+          "maxLength": 4,
+          "type": "string"
+        },
+        "deptName": {
+          "maxLength": 40,
+          "type": "string"
+        }
+      },
+      "required": [
+        "deptNo",
+        "deptName"
+      ],
+      "additionalProperties": false
+    },
+    "Employees": {
+      "properties": {
+        "empNo": {
+          "type": "number",
+          "format": "double"
+        },
+        "birthDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "firstName": {
+          "maxLength": 14,
+          "type": "string"
+        },
+        "lastName": {
+          "maxLength": 16,
+          "type": "string"
+        },
+        "gender": {
+          "maxLength": 1,
+          "type": "string"
+        },
+        "hireDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "empNo",
+        "birthDate",
+        "firstName",
+        "lastName",
+        "gender",
+        "hireDate"
+      ],
+      "additionalProperties": false
+    },
+    "DeptEmp": {
+      "properties": {
+        "empNo": {
+          "type": "number",
+          "format": "double"
+        },
+        "deptNo": {
+          "maxLength": 4,
+          "type": "string"
+        },
+        "fromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "toDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "empNo",
+        "deptNo",
+        "fromDate",
+        "toDate"
+      ],
+      "additionalProperties": false
+    },
+    "DeptManager": {
+      "properties": {
+        "empNo": {
+          "type": "number",
+          "format": "double"
+        },
+        "deptNo": {
+          "maxLength": 4,
+          "type": "string"
+        },
+        "fromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "toDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "empNo",
+        "deptNo",
+        "fromDate",
+        "toDate"
+      ],
+      "additionalProperties": false
+    },
+    "Salaries": {
+      "properties": {
+        "empNo": {
+          "type": "number",
+          "format": "double"
+        },
+        "salary": {
+          "type": "number",
+          "format": "double"
+        },
+        "fromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "toDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "empNo",
+        "salary",
+        "fromDate",
+        "toDate"
+      ],
+      "additionalProperties": false
+    },
+    "Titles": {
+      "properties": {
+        "empNo": {
+          "type": "number",
+          "format": "double"
+        },
+        "title": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "fromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "toDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "empNo",
+        "title",
+        "fromDate"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "tags": [
+    {
+      "name": "User"
+    },
+    {
+      "name": "Departments"
+    },
+    {
+      "name": "DeptEmp"
+    },
+    {
+      "name": "DeptManager"
+    },
+    {
+      "name": "Employees"
+    },
+    {
+      "name": "Salaries"
+    },
+    {
+      "name": "Titles"
+    }
+  ]
+}
